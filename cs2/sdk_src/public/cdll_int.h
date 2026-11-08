@@ -24,7 +24,7 @@ public:
     virtual int GetDemoTick(void) = 0; //:003
 
     virtual void _Unknown_004(void) = 0;
-    virtual void _Unknown_005(void) = 0;
+    virtual int GetDemoTotalTicks(void) = 0; //:005 CDemoFileInfo.playback_ticks
 
     virtual void _Unknown_006(void) = 0;
     virtual void _Unknown_007(void) = 0;
@@ -33,8 +33,13 @@ public:
     virtual void _Unknown_010(void) = 0;
     virtual bool IsPlayingDemo(void) = 0; //:011
     virtual bool IsDemoPaused(void) = 0; //:012
+    virtual void _Unknown_013(void) = 0;
+    virtual void _Unknown_014(void) = 0;
+    virtual void _Unknown_015(void) = 0;
+    virtual void _Unknown_016(void) = 0;
+    virtual float GetDemoPlaybackRate(void) = 0; //:017
 
-    // ...
+    // GetDemoStartTick is the mutable runtime anchor, not header.server_start_tick.
 };
 
 // change this when the new version is incompatable with the old
